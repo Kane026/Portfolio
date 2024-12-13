@@ -76,24 +76,86 @@ header{
 .home-page h1{
 	color: white;
 	font-size: 70px;
-	font-weight: lighter;
+	font-weight: bold;
 	display: flex;
-	
+	animation: reveal 1s ease-in forwards;	
+	text-shadow: 
+	2px 2px 0 #001233,
+	4px 4px 0 #023e7d,
+	6px 6px 0 #0466cb;
 }
 
-.home-page-cirkel{
+@keyframes reveal {
+	0% {
+		opacity: 0; 
+		transform: translateY(100px); 	}
+
+	100% {
+		opacity: 1; 
+		transform: translateY(0);  
+	}
+
+}
+
+.myavatar{
 	height: 300px;
 	width: 300px;
 	background-color: white;
 	border-radius: 180px;
 	margin-left: 70px;
-	animation: ;
-	
-	
+	box-shadow: 5px 5px 40px;
+	animation: float 6s ease-in-out infinite;
 }
+
+@keyframes float {
+	0% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+	50% {
+		box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+		transform: translatey(-20px);
+	}
+	100% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+}
+
+
 
 .home-page-items p{
 	font-size: 28px;
 	font-weight: lighter;
 	color: white;
+	flex-direction: column;
+}
+
+.text-icons-home-page{
+ display: flex;
+ flex-direction: column;
+}
+
+.icons-home-page{
+	flex-direction: row;
+	
+}
+
+.instagram-icon{
+	width: 80px;
+	height: 80px;
+	transition: transform 1s;
+}
+
+.github-icon, .linkedin-icon{
+	width: 70px;
+	height: 70px;
+	margin-bottom: 10px;
+	transition: transform 1s;
+}
+
+
+.github-icon:hover, .instagram-icon:hover, .linkedin-icon:hover {
+  transform: scale(1.2) ;
+
 }
