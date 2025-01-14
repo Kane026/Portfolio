@@ -78,24 +78,42 @@ header{
 	font-size: 70px;
 	font-weight: bold;
 	display: flex;
-	animation: reveal 1s ease-in forwards;	
-	text-shadow: 
-	2px 2px 0 #001233,
-	4px 4px 0 #023e7d,
-	6px 6px 0 #0466cb;
+	
+
 }
 
-@keyframes reveal {
-	0% {
-		opacity: 0; 
-		transform: translateY(100px); 	}
-
-	100% {
-		opacity: 1; 
-		transform: translateY(0);  
+.slide-right {
+	width: 100%;
+	overflow: hidden;
+  }
+  
+  .slide-right h1 {
+	animation: 1.5s slide-right 1.5s forwards;
+	  transform:translate(-100%);
+  }
+  
+  @keyframes slide-right {
+	to {
+	  transform:translateX(0);
 	}
+  }
 
-}
+  .slide-left {
+	overflow: hidden;
+  }
+  
+  .slide-left p {
+	animation: 2.2s slide-left 2.2s forwards;
+	transform:translateX(110%);
+  }
+  
+  @keyframes slide-left {
+	to {
+	  transform:translateX(0);
+	}
+  }
+
+  
 
 .myavatar{
 	height: 300px;
@@ -138,24 +156,109 @@ header{
 
 .icons-home-page{
 	flex-direction: row;
-	
+	width: 100%;
+  overflow: hidden;
+  max-width: 500px;
 }
+
+.icons-home-page a{
+	display: inline-block;
+	opacity: 0;
+	animation: 2s slide-up 2s forwards;
+	transform: translateY(100%);
+}
+
+@keyframes slide-up {
+  to {
+    transform: translateY(0);
+    opacity: 1; 
+  }
+}
+
+.icons-home-page a:nth-child(1) {
+	animation-delay: 0.2s; 
+  }
+  
+  .icons-home-page a:nth-child(2) {
+	animation-delay: 0.4s; 
+  }
+  
+  .icons-home-page a:nth-child(3) {
+	animation-delay: 0.6s; 
+  }
+
 
 .instagram-icon{
 	width: 80px;
 	height: 80px;
-	transition: transform 1s;
+	transition: transform 0.5s;
 }
 
 .github-icon, .linkedin-icon{
 	width: 70px;
 	height: 70px;
 	margin-bottom: 10px;
-	transition: transform 1s;
+	transition: transform 0.5s;
 }
 
 
 .github-icon:hover, .instagram-icon:hover, .linkedin-icon:hover {
   transform: scale(1.2) ;
+}
 
+
+.about-me-items{
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-me-items h1{
+color: white;
+font-size: 40px;
+font-weight: bolder;
+text-align: center;
+margin-top: 250px;
+margin-bottom: 120px;
+}
+
+.about-me-items p{
+	font-size: 28px;
+	color: white;
+	font-style: normal;
+	text-align: center;
+	
+}
+
+.about-me-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.work-right {
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    margin-bottom: 50px;
+	gap: 5%;
+	margin-top: 200px;
+}
+
+.work-right-text {
+	margin-right: 20px;
+	max-width: 600px;
+}
+
+.work-right-text h2{
+font-size: 50px;
+color: white;
+}
+
+.work-right-text p{
+	font-size: 25px;
+}
+
+.work-right-image img{
+border-radius: 20px;
 }
