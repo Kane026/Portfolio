@@ -14,7 +14,7 @@ body {
 	background: linear-gradient(-45deg, #212529, #343A40, #495057, #6c757D, #ADB5BD);
 	background-size: 400% 400%;
 	animation: gradient 15s ease infinite;
-	height: 100vh;
+	height: auto;
   
 }
 
@@ -259,6 +259,49 @@ color: white;
 	font-size: 25px;
 }
 
-.work-right-image img{
-border-radius: 20px;
+.pink-goose-image, .mastermind-image{
+	border-radius: 12px;
+	box-shadow: 0px 0px 10px black;
+}
+
+.work-left {
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+	flex-direction: row-reverse;
+    margin-bottom: 50px;
+	gap: 5%;
+	margin-top: 200px;
+}
+
+.work-left-text {
+	margin-right: 20px;
+	max-width: 600px;
+}
+
+.work-left-text h2{
+font-size: 50px;
+color: white;
+}
+
+.work-left-text p{
+	font-size: 25px;
+}
+
+.pink-goose-image, .mastermind-image{
+	border-radius: 12px;
+	box-shadow: 0px 0px 10px black;
+}
+
+.hidden {
+	opacity: 0;
+	transition: all 1s ease-in-out;
+	transform: translateY(20px);
+	filter: blur(1px);
+}
+
+.hidden.show{
+	opacity: 1;
+	transform: translateY(0);
+	filter: blur(0px);
 }
