@@ -15,6 +15,7 @@ body {
 	background-size: 300% 300%;
 	animation: gradient 12s linear infinite;
 	height: auto;
+
   
 }
 
@@ -30,10 +31,11 @@ body {
 	}
 }
 
-header h1{
+header h1 a{
 	color: white;
 	font-size: 40px;
 	padding-left: 20px;
+	text-decoration: none;
 }
 
 header{
@@ -48,7 +50,7 @@ header{
 	list-style: none;
 
 	justify-content: center;
-	margin-right: 25%;
+	margin-right: 24%;
 
 }
 
@@ -215,7 +217,7 @@ header{
     align-items: center;
 }
 
-.about-me-items h1, .contact-items h1, .work h1 {
+.about-me-items h1, .contact-items h1, .work h1, .aboutme-page {
 color: white;
 font-size: 40px;
 font-weight: bolder;
@@ -340,6 +342,9 @@ color: #fff;
 }
 
 .email{
-	margin-bottom: 50px;
+	margin-bottom: 200px;
 }
 
+.aboutme-page{
+	margin-top: 50px;
+}
