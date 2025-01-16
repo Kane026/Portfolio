@@ -11,9 +11,9 @@
 
 
 body {
-	background: linear-gradient(-45deg, #212529, #343A40, #495057, #6c757D, #ADB5BD);
-	background-size: 400% 400%;
-	animation: gradient 15s ease infinite;
+	background: linear-gradient(-45deg, black, #212529, #343A40, #6c757D, #ADB5BD, white);
+	background-size: 300% 300%;
+	animation: gradient 12s linear infinite;
 	height: auto;
   
 }
@@ -48,7 +48,7 @@ header{
 	list-style: none;
 
 	justify-content: center;
-	margin-right: 26%;
+	margin-right: 25%;
 
 }
 
@@ -58,9 +58,11 @@ header{
 	list-style: none;
 }
 
-.navbar li a{
+.navbar li a, .email{
 	text-decoration: none;
 	color: white;
+	position: relative;
+	font-size: 20px;
 }
 
 .home-page-items{
@@ -213,16 +215,16 @@ header{
     align-items: center;
 }
 
-.about-me-items h1{
+.about-me-items h1, .contact-items h1, .work h1 {
 color: white;
 font-size: 40px;
 font-weight: bolder;
 text-align: center;
-margin-top: 250px;
+margin-top: 200px;
 margin-bottom: 120px;
 }
 
-.about-me-items p{
+.about-me-items p, .contact-items p{
 	font-size: 28px;
 	color: white;
 	font-style: normal;
@@ -257,10 +259,10 @@ color: white;
 
 .work-right-text p{
 	font-size: 25px;
+	color: #fff;
 }
 
-.pink-goose-image, .mastermind-image{
-	border-radius: 12px;
+.pink-goose-image, .mastermind-image, .website-image{
 	box-shadow: 0px 0px 10px black;
 }
 
@@ -286,12 +288,9 @@ color: white;
 
 .work-left-text p{
 	font-size: 25px;
+	color: #fff;
 }
 
-.pink-goose-image, .mastermind-image{
-	border-radius: 12px;
-	box-shadow: 0px 0px 10px black;
-}
 
 .hidden {
 	opacity: 0;
@@ -305,3 +304,42 @@ color: white;
 	transform: translateY(0);
 	filter: blur(0px);
 }
+
+.navbar li a:hover, .email:hover{
+color: #fff;
+}
+
+.navbar li a::before, .email::before{
+	content: "";
+	position: absolute;
+	display: block;
+	width: 100%;
+	height: 2px;
+	bottom: 0;
+	left: 0;
+	transform: scaleX(0);
+	transition: transform 0.3s ease;
+	background-color: #fff; 
+
+}
+
+.navbar li a:hover::before, .email:hover::before{
+	transform: scaleX(1);
+	
+  }
+
+ .website-image{
+	box-shadow: 0px 0px 10px black;
+	object-fit: cover;
+}
+
+.contact{
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.email{
+	margin-bottom: 50px;
+}
+
