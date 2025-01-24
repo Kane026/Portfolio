@@ -1,3 +1,4 @@
+//Code that makes objects appear as they enter the view 
 const observer = new IntersectionObserver((entries) =>{
     entries.forEach((entry) => {
         console.log(entry);
